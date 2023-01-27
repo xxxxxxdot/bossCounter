@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>再生時間</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- 時間紀錄HTML -->
+        <div class="divMessage" id="DivMessage"></div>
+        <div style="margin-top:20px;">
+            <div class="divTimer" id="DIV_checkbox_id0" >
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id0" type="text">
+                    <input class="button" id="id0" type="button" value="巴 魯">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id0" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id0" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id1">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id1" type="text">
+                    <input class="button" id="id1" type="button" value="克 頓">
+                </div>
+                
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id1" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id1" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id2">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id2"type="text">
+                    <input class="button" id="id2" type="button" value="黑 鋼">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id2" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id2" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id3">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id3"type="text">
+                    <input class="button" id="id3" type="button" value="哭 臉">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id3" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id3" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id4">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id4"type="text">
+                    <input class="button" id="id4" type="button" value="亡 命">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id4" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id4" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id5">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id5"type="text">
+                    <input class="button" id="id5" type="button" value="口 水">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id5" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id5" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id6">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id6"type="text">
+                    <input class="button" id="id6" type="button" value="魚 人">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id6" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id6" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id7">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id7"type="text">
+                    <input class="button" id="id7" type="button" value="蜘 蛛">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id7" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id7" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id8">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id8"type="text">
+                    <input class="button" id="id8" type="button" value="鎧 甲">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id8" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id8" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divTimer" id="DIV_checkbox_id9">
+                <div class="divTimerLeft">
+                    <input class="input" id="text_id9"type="text">
+                    <input class="button" id="id9" type="button" value="族 長">
+                </div>
+                <div class="divTimerRight">
+                    <input class="btnUpdata" id="btnUpdata_id9" type="button" value=">" onclick="btnUpdata(this.id)">
+                    <input class="btnClear" id="btn_ClearBTN_id9" type="button" value="X" onclick="fClear(this.id)">
+                </div>  
+            </div>
+            <div class="divMain" >
+                <div class="DIV_input_Clip">
+                <textarea class="input_Clip" id="id_iptClip"type="text"></textarea>
+                </div>
+                <div class="DIV_button_Clip " >
+                <div class="iconfilp" id="GetBossTimerALL" style="margin-left:10px;display:inline-block;"><i class='icon icon-loop' ></i></div>
+                <div style="margin-left:50px;display:inline-block;"><input class="button_Clip" id="btnClip_id" type="button" value="一鍵複製"></div>
+                </div>
+            </div>
+            <div class="divRemark" id="DivRemark"></div>
+
+        </div>
+         <!-- 頁面載入後執行script -->
+        <script>
+            $(function(){ 
+            $("#DivRemark").html("同步按鈕:刷新時間<br>" + "每20分鐘自動刷新");
+            }); 
+        </script>
+  
+        <!-- 時間紀錄script -->
+        <script>
+            var Regeneration_Clock = [];
+            var Regeneration_Name = [];
+            var Regeneration_Timer = [];
+            var url = "./GetBossTimer.php";
+            // var url = "https://savetimer.000webhostapp.com/GetBossTimer.php";
+           //"巴魯"
+            $("#id0").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"克頓"
+            $("#id1").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"黑鋼"
+            $("#id2").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"哭臉"
+            $("#id3").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"亡命"
+            $("#id4").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"口水"
+            $("#id5").click(function(){
+                btnSetTimer(this.id);
+            });
+            //,"魚人",
+            $("#id6").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"蜘蛛"
+            $("#id7").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"鎧甲"
+            $("#id8").click(function(){
+                btnSetTimer(this.id);
+            });
+            //"族長"
+            $("#id9").click(function(){
+                btnSetTimer(this.id);
+            });
+            
+            function btnSetTimer(btnID) {
+                let NowTime = new Date()
+                let NowTime_s = NowTime.getTime();//轉化為時間戳毫秒數
+                let AddThirty_NowTime_s = new Date(NowTime_s + (1000 * 60 *30));
+                $("#text_" + btnID).val(AddThirty_NowTime_s.getHours() + ":" +AddThirty_NowTime_s.getMinutes() );
+                var data = {action:'UpdataBossTimer', SetID:btnID ,SetTimer:$("#text_" + btnID).val()};
+                $.ajax({
+                    url:url,   
+                    method: "POST",    
+                    dataType: 'json',
+                    data: data,
+                });
+                $("#DivMessage").html(BubleSort(3,true));
+            }
+
+            //一鍵複製_按鈕
+            $("#btnClip_id").click(function(){
+                $("#DivMessage").html(BubleSort(3,true));
+                $("#id_iptClip").val(BubleSort(10,false));
+                $("#id_iptClip").select();
+                document.execCommand('copy');
+            });
+
+            //Timer排序
+            function BubleSort(SetCount,InitialPoint) { // SetCount傳回的資料數量
+
+                let Boss_Name = ["巴魯","克頓","黑鋼","哭臉", "亡命", "口水","魚人","蜘蛛","鎧甲","族長"];
+
+                for (let index = 0; index < 10; index++) {
+
+                    Regeneration_Clock =  $("#text_id" + index).val().split(":"); //如果不是00:00格式 ARRAY就會寫入NaN 
+
+                    if (Regeneration_Clock != ''){
+                        Regeneration_Timer[index] = (parseInt(Regeneration_Clock[0]*60) + parseInt(Regeneration_Clock[1]));
+                        Regeneration_Name[index] = Boss_Name[index];
+                    }
+
+                }
+
+                //泡沫排序
+                for (let i = 0; i < Regeneration_Timer.length; i++) {
+                    let temp;
+
+                    for (let j = 0; j < Regeneration_Timer.length; j++) {
+                        if (Regeneration_Timer[j] > Regeneration_Timer[j+1]){
+                            temp_Timer = Regeneration_Timer[j] ;
+                            temp_Name = Regeneration_Name[j] ;
+                            Regeneration_Timer[j] = Regeneration_Timer[j+1];
+                            Regeneration_Name[j] = Regeneration_Name[j+1];
+                            Regeneration_Timer[j+1] = temp_Timer;
+                            Regeneration_Name[j+1] = temp_Name;    
+                        } 
+                    }
+                }
+
+                //取出排序後符合的資料
+                let Str_Boss="";
+                if (InitialPoint == true){
+                    let NowTime = new Date()
+                    let NowTime_s = NowTime.getTime();//轉化為時間戳毫秒數
+                    let AddThirty_NowTime_s = new Date(NowTime_s + (1000 * 60));
+                    let InitialPointValue =  parseInt(AddThirty_NowTime_s.getHours()) * 60 +  parseInt(AddThirty_NowTime_s.getMinutes());
+                    console.log("InitialPointValue" + InitialPointValue);
+                    for (let index = 0; index < Regeneration_Timer.length; index++) {        
+                        if (!isNaN(Regeneration_Timer[index]) && SetCount > 0 ){ // 排序後NaN 會被寫在ARRAY最後面 ， !isNaN 將NaN排除輸出
+                        let R_Timer = Regeneration_Timer[index];
+                        console.log("R_Timer"+R_Timer);
+                            if (R_Timer >= InitialPointValue){
+                            Str_Boss += Regeneration_Name[index] + " " + parseInt(R_Timer/60) + ":" + (R_Timer % 60) + ",";
+                            SetCount -=1;
+                            }
+                        }
+
+                    }
+                }
+                if (InitialPoint == false){
+                    for (let index = 0; index < Regeneration_Timer.length; index++) {        
+                        if (!isNaN(Regeneration_Timer[index]) && SetCount > 0 ){ // 排序後NaN 會被寫在ARRAY最後面 ， !isNaN 將NaN排除輸出
+                        let R_Timer = Regeneration_Timer[index];
+                        Str_Boss += Regeneration_Name[index] + " " + parseInt(R_Timer/60) + ":" + (R_Timer % 60) + ",";
+                        SetCount -=1;
+                        }
+                    }
+                }
+                Str_Boss = Str_Boss.slice(0, -1);
+                return Str_Boss;
+                
+            }
+
+            //一鍵同步_按鈕
+            $("#GetBossTimerALL").click(function () {
+                GetBossTimerALL();
+            });
+
+            setInterval(() => {
+                GetBossTimerALL();
+            }, 600000);
+
+
+            function GetBossTimerALL() {
+
+                var data = { action: 'GetBossTimer' };
+                
+                $.ajax({
+                    url:url,   
+                    method: "POST",    
+                    dataType: 'json',
+                    data: data,
+                    success:function(data){
+
+                        let strImport = data;
+                        for (let i = 0; i < strImport.length; i++) {
+                            let Boss_Name = ["巴魯","克頓","黑鋼","哭臉","亡命","口水","魚人","蜘蛛","鎧甲","族長"];
+                         
+                                for (let j = 0; j < Boss_Name.length; j++) {
+                                    if (strImport[i]['name'] == Boss_Name[j] ){
+
+
+                                    if  ($("#checkbox_id"+j).prop("checked") == true){
+                                        $("#text_id"+j).val(strImport[i]['timer']);
+
+                                        }
+
+                                    }
+                                }
+                            
+                        }
+                    },
+                    error: function() {
+                        console.log("伺服器維護中");
+                    }
+                });
+            };
+
+            // <!-- 左側抽拉式選單內 CheckBox -->
+
+            function CheckBox(id) {
+
+                let id_s = id.slice(9,12);
+
+                $("#" + id).change(function() {
+
+                    fClear(id);
+
+                    if($("#" + id).prop("checked")) {
+                        $("#DIV_" + id).css("display","flex"); 
+                    }
+                    else{
+                        $("#DIV_" + id).css("display","none");
+                    }
+                });
+            }
+            
+            
+            // 清除時間記錄-按鈕
+            function fClear(id) {
+
+                let Clear_text_id = id.substr(-3);
+                let Clear_Regeneration_Timer = id.substr(-1);
+                let Clear_Regeneration_Name = id.substr(-1);
+                $("#text_" + Clear_text_id).val('');
+                delete Regeneration_Timer[Clear_Regeneration_Timer];
+                delete Regeneration_Name[Clear_Regeneration_Name];
+
+            }
+
+            //強制更新資料庫-按鈕
+            function btnUpdata(btnID){
+                let updata_id = btnID.substr(-3);
+                let data = { action:'UpdataBossTimer', SetID:updata_id ,SetTimer:$("#text_" + updata_id).val() };
+                $.ajax({
+                    url:url,   
+                    method: "POST",    
+                    dataType: 'json',
+                    data: data
+                });
+            }
+        </script>
+
+        <!-- 時間紀錄style -->
+        <style>
+            body{
+                background-color:rgb(27,28,58);
+            }
+            .input{
+                border-style: dashed;
+                border-width: 2px;
+                border-color: rgba(84, 81, 78, 0.500);
+                width:70px ;
+                height:40px ;
+                margin-right: 10px;
+                margin-left : 8px;
+                border-radius:10px;
+                text-align: center;
+                font-size:20px;
+                color:rgb(243, 220, 196);
+                background-color:rgba(84, 81, 78, 0.500);
+            }
+            .button{
+                cursor: pointer;
+                border-radius:10px;
+                border: none;
+                width:68px ;
+                height:42px ;
+                font-size:16px;
+                font-weight:bold;
+                color:rgb(243, 220, 196);
+                box-shadow:0px 0px 9px rgb(192, 173, 156);
+                background-color:rgb(84, 81, 78);
+            }
+
+            .DIV_button_Clip{
+                padding-top: 6px;
+                /* padding-right: 6px; */
+                /* margin-left:auto; */
+            }
+            .button_Clip{
+                border: none;
+                cursor: pointer;
+                border-radius:10px;
+                width:100px ;
+                height:30px ;
+                font-size:16px;
+                font-weight:bold;
+                background-color: rgba(84, 81, 78, 0.500);
+                box-shadow:0px 0px 9px rgb(192, 173, 156);
+                color:rgb(243, 220, 196);
+            }
+            .Remark{
+                border-style: dashed;
+                border-width: 2px;
+                border-radius:10px;
+                width:184px ;
+                height:24px ;
+                font-size:16px;
+                background-color: rgba(84, 81, 78, 0.500);
+                color:rgb(243, 220, 196);
+            }
+
+            .divMain {
+               
+                margin: 8px 26px;
+                border-radius:10px;
+                padding: 4px;
+                width:200px ;
+                height:40px ;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+                background-color:rgba(84, 81, 78, 0.500);
+                box-shadow:0px 0px 9px rgb(192, 173, 156);
+            }
+            .input_Clip{
+                border-style: dashed;
+                border-width: 2px;
+                border-radius:10px;
+                width:190px ;
+                height:100px ;
+                font-size:14px;
+                background-color: rgba(84, 81, 78, 0.500);
+                color:rgb(243, 220, 196);
+            }
+
+            .divMain {
+               margin: 8px 26px;
+               border-radius:10px;
+               padding: 4px;
+               width:200px ;
+               height:160px ;
+               display: flex;
+               justify-content: center;
+               align-content: center;
+               flex-wrap: wrap;
+               background-color:rgba(84, 81, 78, 0.500);
+               box-shadow:0px 0px 9px rgb(192, 173, 156);
+               transform: rotateY(0deg);
+           }
+           .divRemark {
+               margin: 8px 26px;
+               border-radius:10px;
+               padding: 4px;
+               width:200px ;
+               height:34px ;
+               display: flex;
+               /* justify-content: center; */
+               /* align-content: center; */
+               flex-wrap: wrap;
+               background-color:rgba(84, 81, 78, 0.500);
+               /* box-shadow:0px 0px 9px rgb(192, 173, 156); */
+               /* transform: rotateY(0deg); */
+               color:rgba(243, 220, 196, 0.479);
+               font-size:10px;
+           }
+           .divMessage {
+               margin: 16px 26px;
+               border-radius:10px;
+               padding: 4px;
+               width:200px ;
+               height:20px ;
+               display: flex;
+               flex-wrap: wrap;
+               background-color:rgba(84, 81, 78, 0.500);
+               box-shadow:0px 0px 9px rgb(229, 43, 170);
+               color:rgb(255, 255, 255);
+               font-size:14px;
+           }
+
+            .divTimer {
+                margin: 8px 26px;
+                border-radius:10px;
+                padding: 4px;
+                width:200px ;
+                height:50px ;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+                background-color:rgba(84, 81, 78, 0.500);
+                box-shadow:0px 0px 9px rgb(192, 173, 156);
+            }
+
+            .divTimerLeft{
+                display: inline-block;
+                width:174px ;
+                height:44px ;
+            
+            }
+            .divTimerRight{
+                margin-top: 2px;
+                display: inline-block;
+                width:10px ;
+                height:44px ;
+                position: relative;
+            }
+            .btnClear{
+                border: none;
+                padding: 2px;
+                cursor: pointer;                
+                position:absolute;
+                bottom:0px;
+                border-radius:4px;
+                width:18px ;
+                height:18px ;
+                font-size:12px;
+                font-weight:bold;
+                color:rgb(243, 220, 196);
+                background-color:rgb(84, 81, 78);
+            }
+            .btnUpdata{
+                border: none;
+                padding: 2px;
+                cursor: pointer;                
+                position:absolute;
+                border-radius:4px;
+                width:18px ;
+                height:18px ;
+                font-size:12px;
+                font-weight:bold;
+                color:rgb(243, 220, 196);
+                background-color:rgb(84, 81, 78);
+            }
+        </style>
+        
+        <!-- 左側抽拉式選單UI-->
+        <div class="right_sidebar">
+            <button type="button" class="btn_drawer">選單</button>
+            <input type="checkbox" name="check" id="checkbox_id0" value="1" onclick="CheckBox(this.id)" checked>巴 魯<br>
+            <input type="checkbox" name="check" id="checkbox_id1" value="1" onclick="CheckBox(this.id)" checked>克 頓<br>
+            <input type="checkbox" name="check" id="checkbox_id2" value="1" onclick="CheckBox(this.id)" checked>黑 鋼<br>
+            <input type="checkbox" name="check" id="checkbox_id3" value="1" onclick="CheckBox(this.id)" checked>哭 臉<br>
+            <input type="checkbox" name="check" id="checkbox_id4" value="1" onclick="CheckBox(this.id)" checked>亡 命<br>
+            <input type="checkbox" name="check" id="checkbox_id5" value="1" onclick="CheckBox(this.id)" >口 水<br>
+            <input type="checkbox" name="check" id="checkbox_id6" value="1" onclick="CheckBox(this.id)" >魚 人<br>
+            <input type="checkbox" name="check" id="checkbox_id7" value="1" onclick="CheckBox(this.id)" >蜘 蛛<br>
+            <input type="checkbox" name="check" id="checkbox_id8" value="1" onclick="CheckBox(this.id)" >鎧 甲<br>
+            <input type="checkbox" name="check" id="checkbox_id9" value="1" onclick="CheckBox(this.id)" >族 長<br>
+        </div>
+    
+        <!-- 左側抽拉式選單script -->
+        <script>
+            // DOM 載入完成之後
+            $(function(){
+            // 點擊
+                var btn = document.querySelector('.btn_drawer')
+                btn.addEventListener("click", function(){
+                    // -open 的樣式切換
+                    $(this).closest("div.right_sidebar").toggleClass("-open");
+            });
+        
+            });
+        </script>
+
+        <!-- 左側抽拉式選單CSS-->
+        <style>
+            .right_sidebar{
+            position: fixed;
+            top: 10%;
+            left: 0;
+            transform: translate(-100%, 0%);
+            min-height: 200px;
+            width: 65px;
+            background-color:rgb(84, 81, 78);
+            color:rgb(243, 220, 196);
+            padding: 10px 20px 10px 10px;
+            border-radius: 0 10px 10px 0;
+            transition: transform 0.5s ease-in-out;
+            }
+            
+            div.right_sidebar.-open{
+            transform: translate(0%, 0%);
+            }
+
+
+            /* 展開的按鈕 */
+            .right_sidebar .btn_drawer{
+            background: none;
+            background-color:rgb(84, 81, 78);
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(100%, -50%);
+            color:rgb(243, 220, 196);
+            border: 0;
+            font-size: 1rem; /* 16px */
+            width: 1.8em;    /* 相對於這個元素的文字大小 */
+            padding: 4px 0;
+            line-height: 1.6;
+            display: inline-block;
+            cursor: pointer;
+            border-radius:0 5px 5px 0;
+            text-align: center;
+            outline: none;
+            }
+            #DIV_checkbox_id5{
+                display: none;
+            }
+            #DIV_checkbox_id6{
+                display: none;
+            }
+            #DIV_checkbox_id7{
+                display: none;
+            }
+            #DIV_checkbox_id8{
+                display: none;
+            }
+            #DIV_checkbox_id9{
+                display: none;
+            }
+            #DIV_checkbox_id10{
+                display: none;
+            }
+
+            @font-face {
+            font-family: 'icomoon';
+            src:  url('fonts/icomoon.eot?gcylqw');
+            src:  url('fonts/icomoon.eot?gcylqw#iefix') format('embedded-opentype'),
+                url('fonts/icomoon.ttf?gcylqw') format('truetype'),
+                url('fonts/icomoon.woff?gcylqw') format('woff'),
+                url('fonts/icomoon.svg?gcylqw#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+            }
+
+            .icon{
+            /* use !important to prevent issues with browser extensions that change fonts */
+            font-family: 'icomoon' !important;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            }
+            .iconfilp {
+            cursor: pointer;
+            }
+            .icon-loop:before {
+            font-size: 25px;
+            /* cursor: pointer; */
+            color:rgb(243, 220, 196);
+            content: "\ea2d";
+            }
+
+        </style>
+
+    </body>
+</html>
